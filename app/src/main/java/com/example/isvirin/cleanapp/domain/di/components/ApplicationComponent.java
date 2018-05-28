@@ -3,6 +3,8 @@ package com.example.isvirin.cleanapp.domain.di.components;
 import android.content.Context;
 
 import com.example.isvirin.cleanapp.domain.di.modules.ApplicationModule;
+import com.example.isvirin.cleanapp.domain.di.modules.DaoModule;
+import com.example.isvirin.cleanapp.domain.di.modules.RestModule;
 import com.example.isvirin.cleanapp.domain.executor.PostExecutionThread;
 import com.example.isvirin.cleanapp.domain.executor.ThreadExecutor;
 import com.example.isvirin.cleanapp.domain.repository.AutoRepository;
@@ -12,7 +14,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(dependencies = ApplicationComponent.class, modules = ApplicationModule.class)
+@Component(dependencies = ApplicationComponent.class, modules = {ApplicationModule.class, RestModule.class, DaoModule.class})
 public interface ApplicationComponent {
     void inject(BaseActivity baseActivity);
 

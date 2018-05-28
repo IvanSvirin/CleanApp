@@ -7,7 +7,7 @@ import java.util.List;
 import rx.Observable;
 
 public interface AutoCache {
-    Observable<AutoEntity> getAutos();
+    Observable<List<AutoEntity>> getAutos();
 
     void putAutos(List<AutoEntity> autoEntities);
 }
