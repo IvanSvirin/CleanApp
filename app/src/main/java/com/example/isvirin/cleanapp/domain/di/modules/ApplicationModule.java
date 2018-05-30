@@ -3,7 +3,9 @@ package com.example.isvirin.cleanapp.domain.di.modules;
 import android.content.Context;
 import com.example.isvirin.cleanapp.AutoApplication;
 import com.example.isvirin.cleanapp.data.cache.AutoCache;
+import com.example.isvirin.cleanapp.data.cache.AutoCacheImpl;
 import com.example.isvirin.cleanapp.data.executor.JobExecutor;
+import com.example.isvirin.cleanapp.data.repository.AutoDataRepository;
 import com.example.isvirin.cleanapp.domain.executor.PostExecutionThread;
 import com.example.isvirin.cleanapp.domain.executor.ThreadExecutor;
 import com.example.isvirin.cleanapp.domain.repository.AutoRepository;
@@ -40,13 +42,13 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    AutoRepository provideAutoRepository(AutoRepository autoRepository){
+    AutoRepository provideAutoRepository(AutoDataRepository autoRepository){
         return autoRepository;
     }
 
     @Provides
     @Singleton
-    AutoCache provideAutoCache(AutoCache autoCache){
+    AutoCache provideAutoCache(AutoCacheImpl autoCache){
         return autoCache;
     }
 }

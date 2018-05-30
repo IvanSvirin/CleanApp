@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import com.example.isvirin.cleanapp.R;
 import com.example.isvirin.cleanapp.domain.di.HasComponent;
 import com.example.isvirin.cleanapp.domain.di.components.AutoComponent;
+import com.example.isvirin.cleanapp.domain.di.components.DaggerAutoComponent;
 import com.example.isvirin.cleanapp.presentation.model.AutoModel;
 import com.example.isvirin.cleanapp.presentation.presenter.AutoListPresenter;
 import com.example.isvirin.cleanapp.presentation.view.AutoListView;

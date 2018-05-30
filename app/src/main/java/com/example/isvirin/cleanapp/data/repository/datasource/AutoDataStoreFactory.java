@@ -27,6 +27,6 @@ public class AutoDataStoreFactory {
     }
 
     private AutoDataStore createCloudDataStore() {
-        return new CloudAutoDataStore(context, apiInterface, autoCache, context1, apiInterface1, autoCache1);
+        return new CloudAutoDataStore(context, apiInterface, autoCache);
     }
 }
